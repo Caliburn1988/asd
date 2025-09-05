@@ -1,0 +1,2 @@
+/usr/bin/ar qc libtaskscheduler.a CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.o
+/usr/bin/ranlib libtaskscheduler.a
