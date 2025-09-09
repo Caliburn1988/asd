@@ -86,17 +86,49 @@ CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/YB_GUI_V05/modules/TaskScheduler/src/TaskScheduler.cpp -o CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.s
 
+CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o: CMakeFiles/taskscheduler.dir/flags.make
+CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o: /workspace/YB_GUI_V05/modules/TaskScheduler/src/ThreadPool.cpp
+CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o: CMakeFiles/taskscheduler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o -MF CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o.d -o CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o -c /workspace/YB_GUI_V05/modules/TaskScheduler/src/ThreadPool.cpp
+
+CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/YB_GUI_V05/modules/TaskScheduler/src/ThreadPool.cpp > CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.i
+
+CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/YB_GUI_V05/modules/TaskScheduler/src/ThreadPool.cpp -o CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.s
+
+CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o: CMakeFiles/taskscheduler.dir/flags.make
+CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o: /workspace/YB_GUI_V05/modules/TaskScheduler/src/PriorityQueue.cpp
+CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o: CMakeFiles/taskscheduler.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o -MF CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o.d -o CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o -c /workspace/YB_GUI_V05/modules/TaskScheduler/src/PriorityQueue.cpp
+
+CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /workspace/YB_GUI_V05/modules/TaskScheduler/src/PriorityQueue.cpp > CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.i
+
+CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /workspace/YB_GUI_V05/modules/TaskScheduler/src/PriorityQueue.cpp -o CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.s
+
 # Object files for target taskscheduler
 taskscheduler_OBJECTS = \
-"CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.o"
+"CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.o" \
+"CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o" \
+"CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o"
 
 # External object files for target taskscheduler
 taskscheduler_EXTERNAL_OBJECTS =
 
 libtaskscheduler.a: CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.o
+libtaskscheduler.a: CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o
+libtaskscheduler.a: CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o
 libtaskscheduler.a: CMakeFiles/taskscheduler.dir/build.make
 libtaskscheduler.a: CMakeFiles/taskscheduler.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX static library libtaskscheduler.a"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX static library libtaskscheduler.a"
 	$(CMAKE_COMMAND) -P CMakeFiles/taskscheduler.dir/cmake_clean_target.cmake
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/taskscheduler.dir/link.txt --verbose=$(VERBOSE)
 

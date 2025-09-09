@@ -14,6 +14,8 @@ include_directories(include)
 # 源文件
 set(SOURCES
     src/TaskScheduler.cpp
+    src/ThreadPool.cpp
+    src/PriorityQueue.cpp
 )
 
 # 创建静态库
@@ -21,9 +23,13 @@ add_library(taskscheduler STATIC ${SOURCES})
 
 # 测试可执行文件
 add_executable(test_task_scheduler tests/test_task_scheduler.cpp)
+add_executable(test_milestone2 tests/test_milestone2.cpp)
+add_executable(simple_test tests/simple_test.cpp)
 
 # 链接库
 target_link_libraries(test_task_scheduler taskscheduler pthread)
+target_link_libraries(test_milestone2 taskscheduler pthread)
+target_link_libraries(simple_test taskscheduler pthread)
 
 # 添加测试
 enable_testing()

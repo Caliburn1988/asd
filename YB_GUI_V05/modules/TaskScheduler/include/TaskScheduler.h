@@ -193,9 +193,9 @@ private:
     bool checkDependencies(const std::vector<TaskID>& dependencies);
     
     // 成员变量
-    // 在里程碑1中，这些组件暂时不实现
-    // std::unique_ptr<ThreadPool> threadPool_;
-    // std::unique_ptr<PriorityQueue> taskQueue_;
+    std::unique_ptr<ThreadPool> threadPool_;
+    std::unique_ptr<PriorityQueue> taskQueue_;
+    // 以下组件将在后续里程碑中实现
     // std::unique_ptr<PerformanceMonitor> performanceMonitor_;
     // std::unique_ptr<TaskTimeoutManager> timeoutManager_;
     // std::unique_ptr<Logger> logger_;

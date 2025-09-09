@@ -246,6 +246,8 @@ CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.o: \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/bits/uniform_int_dist.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/pstl/glue_algorithm_defs.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/any \
+  /workspace/YB_GUI_V05/modules/TaskScheduler/src/../include/ThreadPool.h \
+  /workspace/YB_GUI_V05/modules/TaskScheduler/src/../include/PriorityQueue.h \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/iostream \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/ostream \
   /usr/lib/gcc/x86_64-linux-gnu/14/../../../../include/c++/14/ios \

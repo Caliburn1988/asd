@@ -152,6 +152,56 @@ test_task_scheduler/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task_scheduler.dir/build.make CMakeFiles/test_task_scheduler.dir/build
 .PHONY : test_task_scheduler/fast
 
+#=============================================================================
+# Target rules for targets named test_milestone2
+
+# Build rule for target.
+test_milestone2: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_milestone2
+.PHONY : test_milestone2
+
+# fast build rule for target.
+test_milestone2/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/build
+.PHONY : test_milestone2/fast
+
+#=============================================================================
+# Target rules for targets named simple_test
+
+# Build rule for target.
+simple_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 simple_test
+.PHONY : simple_test
+
+# fast build rule for target.
+simple_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
+.PHONY : simple_test/fast
+
+src/PriorityQueue.o: src/PriorityQueue.cpp.o
+.PHONY : src/PriorityQueue.o
+
+# target to build an object file
+src/PriorityQueue.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.o
+.PHONY : src/PriorityQueue.cpp.o
+
+src/PriorityQueue.i: src/PriorityQueue.cpp.i
+.PHONY : src/PriorityQueue.i
+
+# target to preprocess a source file
+src/PriorityQueue.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.i
+.PHONY : src/PriorityQueue.cpp.i
+
+src/PriorityQueue.s: src/PriorityQueue.cpp.s
+.PHONY : src/PriorityQueue.s
+
+# target to generate assembly for a file
+src/PriorityQueue.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/PriorityQueue.cpp.s
+.PHONY : src/PriorityQueue.cpp.s
+
 src/TaskScheduler.o: src/TaskScheduler.cpp.o
 .PHONY : src/TaskScheduler.o
 
@@ -175,6 +225,78 @@ src/TaskScheduler.s: src/TaskScheduler.cpp.s
 src/TaskScheduler.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/TaskScheduler.cpp.s
 .PHONY : src/TaskScheduler.cpp.s
+
+src/ThreadPool.o: src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.o
+
+# target to build an object file
+src/ThreadPool.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.o
+.PHONY : src/ThreadPool.cpp.o
+
+src/ThreadPool.i: src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.i
+
+# target to preprocess a source file
+src/ThreadPool.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.i
+.PHONY : src/ThreadPool.cpp.i
+
+src/ThreadPool.s: src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.s
+
+# target to generate assembly for a file
+src/ThreadPool.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.s
+.PHONY : src/ThreadPool.cpp.s
+
+tests/simple_test.o: tests/simple_test.cpp.o
+.PHONY : tests/simple_test.o
+
+# target to build an object file
+tests/simple_test.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/tests/simple_test.cpp.o
+.PHONY : tests/simple_test.cpp.o
+
+tests/simple_test.i: tests/simple_test.cpp.i
+.PHONY : tests/simple_test.i
+
+# target to preprocess a source file
+tests/simple_test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/tests/simple_test.cpp.i
+.PHONY : tests/simple_test.cpp.i
+
+tests/simple_test.s: tests/simple_test.cpp.s
+.PHONY : tests/simple_test.s
+
+# target to generate assembly for a file
+tests/simple_test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/tests/simple_test.cpp.s
+.PHONY : tests/simple_test.cpp.s
+
+tests/test_milestone2.o: tests/test_milestone2.cpp.o
+.PHONY : tests/test_milestone2.o
+
+# target to build an object file
+tests/test_milestone2.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/tests/test_milestone2.cpp.o
+.PHONY : tests/test_milestone2.cpp.o
+
+tests/test_milestone2.i: tests/test_milestone2.cpp.i
+.PHONY : tests/test_milestone2.i
+
+# target to preprocess a source file
+tests/test_milestone2.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/tests/test_milestone2.cpp.i
+.PHONY : tests/test_milestone2.cpp.i
+
+tests/test_milestone2.s: tests/test_milestone2.cpp.s
+.PHONY : tests/test_milestone2.s
+
+# target to generate assembly for a file
+tests/test_milestone2.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/tests/test_milestone2.cpp.s
+.PHONY : tests/test_milestone2.cpp.s
 
 tests/test_task_scheduler.o: tests/test_task_scheduler.cpp.o
 .PHONY : tests/test_task_scheduler.o
@@ -209,11 +331,25 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... simple_test"
 	@echo "... taskscheduler"
+	@echo "... test_milestone2"
 	@echo "... test_task_scheduler"
+	@echo "... src/PriorityQueue.o"
+	@echo "... src/PriorityQueue.i"
+	@echo "... src/PriorityQueue.s"
 	@echo "... src/TaskScheduler.o"
 	@echo "... src/TaskScheduler.i"
 	@echo "... src/TaskScheduler.s"
+	@echo "... src/ThreadPool.o"
+	@echo "... src/ThreadPool.i"
+	@echo "... src/ThreadPool.s"
+	@echo "... tests/simple_test.o"
+	@echo "... tests/simple_test.i"
+	@echo "... tests/simple_test.s"
+	@echo "... tests/test_milestone2.o"
+	@echo "... tests/test_milestone2.i"
+	@echo "... tests/test_milestone2.s"
 	@echo "... tests/test_task_scheduler.o"
 	@echo "... tests/test_task_scheduler.i"
 	@echo "... tests/test_task_scheduler.s"
