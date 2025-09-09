@@ -166,6 +166,32 @@ test_milestone2/fast:
 .PHONY : test_milestone2/fast
 
 #=============================================================================
+# Target rules for targets named test_milestone3
+
+# Build rule for target.
+test_milestone3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_milestone3
+.PHONY : test_milestone3
+
+# fast build rule for target.
+test_milestone3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/build
+.PHONY : test_milestone3/fast
+
+#=============================================================================
+# Target rules for targets named quick_test_milestone3
+
+# Build rule for target.
+quick_test_milestone3: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 quick_test_milestone3
+.PHONY : quick_test_milestone3
+
+# fast build rule for target.
+quick_test_milestone3/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/build
+.PHONY : quick_test_milestone3/fast
+
+#=============================================================================
 # Target rules for targets named simple_test
 
 # Build rule for target.
@@ -250,6 +276,30 @@ src/ThreadPool.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/src/ThreadPool.cpp.s
 .PHONY : src/ThreadPool.cpp.s
 
+tests/quick_test_milestone3.o: tests/quick_test_milestone3.cpp.o
+.PHONY : tests/quick_test_milestone3.o
+
+# target to build an object file
+tests/quick_test_milestone3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/tests/quick_test_milestone3.cpp.o
+.PHONY : tests/quick_test_milestone3.cpp.o
+
+tests/quick_test_milestone3.i: tests/quick_test_milestone3.cpp.i
+.PHONY : tests/quick_test_milestone3.i
+
+# target to preprocess a source file
+tests/quick_test_milestone3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/tests/quick_test_milestone3.cpp.i
+.PHONY : tests/quick_test_milestone3.cpp.i
+
+tests/quick_test_milestone3.s: tests/quick_test_milestone3.cpp.s
+.PHONY : tests/quick_test_milestone3.s
+
+# target to generate assembly for a file
+tests/quick_test_milestone3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/tests/quick_test_milestone3.cpp.s
+.PHONY : tests/quick_test_milestone3.cpp.s
+
 tests/simple_test.o: tests/simple_test.cpp.o
 .PHONY : tests/simple_test.o
 
@@ -298,6 +348,30 @@ tests/test_milestone2.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/tests/test_milestone2.cpp.s
 .PHONY : tests/test_milestone2.cpp.s
 
+tests/test_milestone3.o: tests/test_milestone3.cpp.o
+.PHONY : tests/test_milestone3.o
+
+# target to build an object file
+tests/test_milestone3.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/tests/test_milestone3.cpp.o
+.PHONY : tests/test_milestone3.cpp.o
+
+tests/test_milestone3.i: tests/test_milestone3.cpp.i
+.PHONY : tests/test_milestone3.i
+
+# target to preprocess a source file
+tests/test_milestone3.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/tests/test_milestone3.cpp.i
+.PHONY : tests/test_milestone3.cpp.i
+
+tests/test_milestone3.s: tests/test_milestone3.cpp.s
+.PHONY : tests/test_milestone3.s
+
+# target to generate assembly for a file
+tests/test_milestone3.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/tests/test_milestone3.cpp.s
+.PHONY : tests/test_milestone3.cpp.s
+
 tests/test_task_scheduler.o: tests/test_task_scheduler.cpp.o
 .PHONY : tests/test_task_scheduler.o
 
@@ -331,9 +405,11 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... quick_test_milestone3"
 	@echo "... simple_test"
 	@echo "... taskscheduler"
 	@echo "... test_milestone2"
+	@echo "... test_milestone3"
 	@echo "... test_task_scheduler"
 	@echo "... src/PriorityQueue.o"
 	@echo "... src/PriorityQueue.i"
@@ -344,12 +420,18 @@ help:
 	@echo "... src/ThreadPool.o"
 	@echo "... src/ThreadPool.i"
 	@echo "... src/ThreadPool.s"
+	@echo "... tests/quick_test_milestone3.o"
+	@echo "... tests/quick_test_milestone3.i"
+	@echo "... tests/quick_test_milestone3.s"
 	@echo "... tests/simple_test.o"
 	@echo "... tests/simple_test.i"
 	@echo "... tests/simple_test.s"
 	@echo "... tests/test_milestone2.o"
 	@echo "... tests/test_milestone2.i"
 	@echo "... tests/test_milestone2.s"
+	@echo "... tests/test_milestone3.o"
+	@echo "... tests/test_milestone3.i"
+	@echo "... tests/test_milestone3.s"
 	@echo "... tests/test_task_scheduler.o"
 	@echo "... tests/test_task_scheduler.i"
 	@echo "... tests/test_task_scheduler.s"

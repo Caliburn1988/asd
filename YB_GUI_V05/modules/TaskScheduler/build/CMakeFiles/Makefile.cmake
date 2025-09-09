@@ -60,5 +60,7 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/taskscheduler.dir/DependInfo.cmake"
   "CMakeFiles/test_task_scheduler.dir/DependInfo.cmake"
   "CMakeFiles/test_milestone2.dir/DependInfo.cmake"
+  "CMakeFiles/test_milestone3.dir/DependInfo.cmake"
+  "CMakeFiles/quick_test_milestone3.dir/DependInfo.cmake"
   "CMakeFiles/simple_test.dir/DependInfo.cmake"
   )
