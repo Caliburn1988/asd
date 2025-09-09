@@ -66,6 +66,8 @@ CMAKE_BINARY_DIR = /workspace/YB_GUI_V05/modules/TaskScheduler/build
 all: CMakeFiles/taskscheduler.dir/all
 all: CMakeFiles/test_task_scheduler.dir/all
 all: CMakeFiles/test_milestone2.dir/all
+all: CMakeFiles/test_milestone3.dir/all
+all: CMakeFiles/quick_test_milestone3.dir/all
 all: CMakeFiles/simple_test.dir/all
 .PHONY : all
 
@@ -73,6 +75,8 @@ all: CMakeFiles/simple_test.dir/all
 codegen: CMakeFiles/taskscheduler.dir/codegen
 codegen: CMakeFiles/test_task_scheduler.dir/codegen
 codegen: CMakeFiles/test_milestone2.dir/codegen
+codegen: CMakeFiles/test_milestone3.dir/codegen
+codegen: CMakeFiles/quick_test_milestone3.dir/codegen
 codegen: CMakeFiles/simple_test.dir/codegen
 .PHONY : codegen
 
@@ -84,6 +88,8 @@ preinstall:
 clean: CMakeFiles/taskscheduler.dir/clean
 clean: CMakeFiles/test_task_scheduler.dir/clean
 clean: CMakeFiles/test_milestone2.dir/clean
+clean: CMakeFiles/test_milestone3.dir/clean
+clean: CMakeFiles/quick_test_milestone3.dir/clean
 clean: CMakeFiles/simple_test.dir/clean
 .PHONY : clean
 
@@ -94,7 +100,7 @@ clean: CMakeFiles/simple_test.dir/clean
 CMakeFiles/taskscheduler.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=3,4,5,6 "Built target taskscheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=5,6,7,8 "Built target taskscheduler"
 .PHONY : CMakeFiles/taskscheduler.dir/all
 
 # Build rule for subdir invocation for target.
@@ -111,7 +117,7 @@ taskscheduler: CMakeFiles/taskscheduler.dir/rule
 # codegen rule for target.
 CMakeFiles/taskscheduler.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/taskscheduler.dir/build.make CMakeFiles/taskscheduler.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=3,4,5,6 "Finished codegen for target taskscheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=5,6,7,8 "Finished codegen for target taskscheduler"
 .PHONY : CMakeFiles/taskscheduler.dir/codegen
 
 # clean rule for target.
@@ -126,7 +132,7 @@ CMakeFiles/taskscheduler.dir/clean:
 CMakeFiles/test_task_scheduler.dir/all: CMakeFiles/taskscheduler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task_scheduler.dir/build.make CMakeFiles/test_task_scheduler.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task_scheduler.dir/build.make CMakeFiles/test_task_scheduler.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=9,10 "Built target test_task_scheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=13,14 "Built target test_task_scheduler"
 .PHONY : CMakeFiles/test_task_scheduler.dir/all
 
 # Build rule for subdir invocation for target.
@@ -143,7 +149,7 @@ test_task_scheduler: CMakeFiles/test_task_scheduler.dir/rule
 # codegen rule for target.
 CMakeFiles/test_task_scheduler.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_task_scheduler.dir/build.make CMakeFiles/test_task_scheduler.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=9,10 "Finished codegen for target test_task_scheduler"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=13,14 "Finished codegen for target test_task_scheduler"
 .PHONY : CMakeFiles/test_task_scheduler.dir/codegen
 
 # clean rule for target.
@@ -158,7 +164,7 @@ CMakeFiles/test_task_scheduler.dir/clean:
 CMakeFiles/test_milestone2.dir/all: CMakeFiles/taskscheduler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=7,8 "Built target test_milestone2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=9,10 "Built target test_milestone2"
 .PHONY : CMakeFiles/test_milestone2.dir/all
 
 # Build rule for subdir invocation for target.
@@ -175,7 +181,7 @@ test_milestone2: CMakeFiles/test_milestone2.dir/rule
 # codegen rule for target.
 CMakeFiles/test_milestone2.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone2.dir/build.make CMakeFiles/test_milestone2.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=7,8 "Finished codegen for target test_milestone2"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=9,10 "Finished codegen for target test_milestone2"
 .PHONY : CMakeFiles/test_milestone2.dir/codegen
 
 # clean rule for target.
@@ -184,13 +190,77 @@ CMakeFiles/test_milestone2.dir/clean:
 .PHONY : CMakeFiles/test_milestone2.dir/clean
 
 #=============================================================================
+# Target rules for target CMakeFiles/test_milestone3.dir
+
+# All Build rule for target.
+CMakeFiles/test_milestone3.dir/all: CMakeFiles/taskscheduler.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=11,12 "Built target test_milestone3"
+.PHONY : CMakeFiles/test_milestone3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/test_milestone3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/test_milestone3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles 0
+.PHONY : CMakeFiles/test_milestone3.dir/rule
+
+# Convenience name for target.
+test_milestone3: CMakeFiles/test_milestone3.dir/rule
+.PHONY : test_milestone3
+
+# codegen rule for target.
+CMakeFiles/test_milestone3.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=11,12 "Finished codegen for target test_milestone3"
+.PHONY : CMakeFiles/test_milestone3.dir/codegen
+
+# clean rule for target.
+CMakeFiles/test_milestone3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_milestone3.dir/build.make CMakeFiles/test_milestone3.dir/clean
+.PHONY : CMakeFiles/test_milestone3.dir/clean
+
+#=============================================================================
+# Target rules for target CMakeFiles/quick_test_milestone3.dir
+
+# All Build rule for target.
+CMakeFiles/quick_test_milestone3.dir/all: CMakeFiles/taskscheduler.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=1,2 "Built target quick_test_milestone3"
+.PHONY : CMakeFiles/quick_test_milestone3.dir/all
+
+# Build rule for subdir invocation for target.
+CMakeFiles/quick_test_milestone3.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles 6
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/quick_test_milestone3.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles 0
+.PHONY : CMakeFiles/quick_test_milestone3.dir/rule
+
+# Convenience name for target.
+quick_test_milestone3: CMakeFiles/quick_test_milestone3.dir/rule
+.PHONY : quick_test_milestone3
+
+# codegen rule for target.
+CMakeFiles/quick_test_milestone3.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=1,2 "Finished codegen for target quick_test_milestone3"
+.PHONY : CMakeFiles/quick_test_milestone3.dir/codegen
+
+# clean rule for target.
+CMakeFiles/quick_test_milestone3.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/quick_test_milestone3.dir/build.make CMakeFiles/quick_test_milestone3.dir/clean
+.PHONY : CMakeFiles/quick_test_milestone3.dir/clean
+
+#=============================================================================
 # Target rules for target CMakeFiles/simple_test.dir
 
 # All Build rule for target.
 CMakeFiles/simple_test.dir/all: CMakeFiles/taskscheduler.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=1,2 "Built target simple_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=3,4 "Built target simple_test"
 .PHONY : CMakeFiles/simple_test.dir/all
 
 # Build rule for subdir invocation for target.
@@ -207,7 +277,7 @@ simple_test: CMakeFiles/simple_test.dir/rule
 # codegen rule for target.
 CMakeFiles/simple_test.dir/codegen:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/simple_test.dir/build.make CMakeFiles/simple_test.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=1,2 "Finished codegen for target simple_test"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/workspace/YB_GUI_V05/modules/TaskScheduler/build/CMakeFiles --progress-num=3,4 "Finished codegen for target simple_test"
 .PHONY : CMakeFiles/simple_test.dir/codegen
 
 # clean rule for target.

@@ -1,0 +1,1 @@
+/usr/bin/c++ -Xlinker --dependency-file=CMakeFiles/quick_test_milestone3.dir/link.d CMakeFiles/quick_test_milestone3.dir/tests/quick_test_milestone3.cpp.o -o quick_test_milestone3  libtaskscheduler.a -lpthread

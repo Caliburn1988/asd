@@ -26,6 +26,8 @@ class PriorityQueue;
 class PerformanceMonitor;
 class TaskTimeoutManager;
 class Logger;
+class LoadBalancer;
+class ResourceManager;
 
 // 类型定义
 using TaskID = uint64_t;
@@ -120,6 +122,21 @@ struct QueueStatus {
     std::map<Priority, size_t> priorityDistribution;
 };
 
+struct ResourceLimits {
+    double maxCpuUsage = 80.0;          // 最大CPU使用率百分比
+    size_t maxMemoryUsage = 1024 * 1024 * 1024; // 最大内存使用量（字节）
+    size_t maxQueueLength = 10000;       // 最大队列长度
+    std::chrono::milliseconds maxTaskDuration = std::chrono::milliseconds(300000); // 最大任务执行时间
+};
+
+struct LoadBalancingConfig {
+    double scaleUpThreshold = 0.8;       // 扩容阈值
+    double scaleDownThreshold = 0.3;     // 缩容阈值
+    size_t scaleUpStep = 1;              // 扩容步长
+    size_t scaleDownStep = 1;            // 缩容步长
+    std::chrono::milliseconds cooldownPeriod = std::chrono::milliseconds(5000); // 冷却期
+};
+
 struct SchedulerConfig {
     size_t minThreads = 2;
     size_t maxThreads = 16;
@@ -130,6 +147,8 @@ struct SchedulerConfig {
     std::chrono::milliseconds monitorInterval = std::chrono::milliseconds(1000);
     std::string logLevel = "INFO";
     std::string logFilePath = "./logs/scheduler.log";
+    ResourceLimits resourceLimits;
+    LoadBalancingConfig loadBalancingConfig;
 };
 
 // 主要类声明
@@ -180,6 +199,20 @@ public:
     void adjustThreadPoolSize(size_t newSize);
     void flushLogs();
     
+    // 负载均衡和资源管理
+    void enableAutoScaling(bool enable);
+    bool isAutoScalingEnabled() const;
+    void setResourceLimits(const ResourceLimits& limits);
+    ResourceLimits getResourceLimits() const;
+    void setLoadBalancingConfig(const LoadBalancingConfig& config);
+    LoadBalancingConfig getLoadBalancingConfig() const;
+    
+    // 资源监控
+    double getCurrentCpuUsage() const;
+    size_t getCurrentMemoryUsage() const;
+    double getLoadFactor() const;
+    bool isResourceLimitExceeded() const;
+    
 private:
     // 内部方法
     TaskID generateTaskId();
@@ -191,6 +224,16 @@ private:
     void handleTaskCompletion(const TaskResult& result);
     void handleTaskFailure(TaskID taskId, const std::string& error);
     bool checkDependencies(const std::vector<TaskID>& dependencies);
+    
+    // 负载均衡和资源管理内部方法
+    void performLoadBalancing();
+    void checkResourceLimits();
+    void updateResourceUsage();
+    bool shouldScaleUp() const;
+    bool shouldScaleDown() const;
+    void scaleUp();
+    void scaleDown();
+    double calculateLoadFactor() const;
     
     // 成员变量
     std::unique_ptr<ThreadPool> threadPool_;
@@ -218,6 +261,15 @@ private:
     
     PerformanceMetrics currentMetrics_;
     std::chrono::steady_clock::time_point startTime_;
+    
+    // 负载均衡和资源管理相关成员变量
+    std::atomic<bool> autoScalingEnabled_;
+    std::chrono::steady_clock::time_point lastScalingAction_;
+    std::atomic<double> currentCpuUsage_;
+    std::atomic<size_t> currentMemoryUsage_;
+    std::atomic<double> currentLoadFactor_;
+    std::atomic<bool> resourceLimitExceeded_;
+    mutable std::mutex resourceMutex_;
 };
 
 // 辅助类和函数
